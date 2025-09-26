@@ -13,7 +13,7 @@ import AdminDashboard from './pages/AdminDashboard';
 import {Toaster} from 'react-hot-toast'
 import Gallery from './components/Gallery/Gallery';
 import About from './components/About/About';
-import ScrollToTop from './components/common/ScrollToTop';
+// import ScrollToTop from './components/common/ScrollToTop';
 
 function App() {
   return (
@@ -33,7 +33,7 @@ function App() {
           </Routes>
         </main>
         <Footer />
-        <ScrollToTop/>
+        {/* <ScrollToTop/> */}
         <Toaster/>
       </div>
     </Router>
