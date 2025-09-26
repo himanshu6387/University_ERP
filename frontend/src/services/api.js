@@ -1,5 +1,4 @@
-const API_BASE_URL = 'https://university-erp-2.onrender.com/api';
-
+const API_BASE_URL = 'https://university-erp-2.onrender.com/api'
 
 class ApiService {
   async request(endpoint, options = {}) {
