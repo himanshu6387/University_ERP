@@ -7,7 +7,7 @@ const Gallery = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/images")
+      .get("https://university-erp-2.onrender.com/api/images")
       .then((res) => setImages(res.data))
       .catch((err) => console.log(err));
   }, []);

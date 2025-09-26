@@ -73,6 +73,7 @@ const Footer = () => {
               <li><a href="#">Volunteer</a></li>
               <li><a href="#">Partner with Us</a></li>
               <li><a href="#">Apply for Admission</a></li>
+              <li><Link to={'/adminLogin'}>Admin Login</Link></li>
             </ul>
           </div>
 

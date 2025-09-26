@@ -24,7 +24,7 @@ const AdminDashboard = () => {
 
 
     try {
-      const res = await axios.post('http://localhost:5000/api/images/upload', formData)
+      const res = await axios.post('https://university-erp-2.onrender.com/api/images/upload', formData)
       toast.success('File Uploaded Successfully...')
       console.log(res.data)
     } catch (error) {
