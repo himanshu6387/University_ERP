@@ -13,6 +13,7 @@ import AdminDashboard from './pages/AdminDashboard';
 import {Toaster} from 'react-hot-toast'
 import Gallery from './components/Gallery/Gallery';
 import About from './components/About/About';
+import DonationSection from './components/Donation/DonationSection';
 // import ScrollToTop from './components/common/ScrollToTop';
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
             <Route path="/adminDashboard" element={<AdminDashboard />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/about" element={<About />} />
+            <Route path="/donation" element={<DonationSection/>} />
           </Routes>
         </main>
         <Footer />

@@ -1,12 +1,13 @@
 // src/components/Header/Header.jsx
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Header.css";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [showAdmissionBanner, setShowAdmissionBanner] = useState(true);
+  const navigate = useNavigate()
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
@@ -24,6 +25,10 @@ const Header = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenu = () => setIsMenuOpen(false);
   const closeBanner = () => setShowAdmissionBanner(false);
+
+  const donateBtn=()=>{
+    navigate('/donation')
+  }
 
   return (
     <>
@@ -134,7 +139,7 @@ const Header = () => {
                     </a>
                   </div>
                 </div>
-                <button className="donate-btn-nav">DONATE NOW</button>
+                <button className="donate-btn-nav" onClick={donateBtn}>DONATE NOW</button>
               </div>
             </nav>
 
