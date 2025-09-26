@@ -168,7 +168,7 @@ const DonationSection = () => {
       <body>
         <div class="receipt">
           <div class="header">
-            <div class="logo">🎓 Umeed Global School</div>
+            <div class="logo">🎓 All Around School</div>
             <div class="tagline">Hope for a Better Tomorrow</div>
             <h2 class="receipt-title">Donation Receipt</h2>
             <span class="receipt-id">Receipt #UGS${currentDonationId}</span>
