@@ -1,0 +1,71 @@
+.gallery-section {
+  padding: 40px 20px;
+  background: #f8fafc; /* light background */
+}
+
+.gallery-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 1.5em;
+  color: #1f2937; /* gray-800 */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.gallery-grid {
+  column-count: 3; /* default: 3 columns collage */
+  column-gap: 15px;
+}
+
+.gallery-item {
+  margin-bottom: 15px;
+  break-inside: avoid;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item img {
+  width: 100%;
+  display: block;
+  height: 250px;
+  border: 1px solid gray;
+  border-radius: 12px;
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* 📱 Mobile (small screens: 0px - 600px) */
+@media (max-width: 600px) {
+  .gallery-grid {
+    column-count: 1; /* 1 column on mobile */
+  }
+
+  .gallery-heading {
+    font-size: 1.5rem; /* smaller heading */
+  }
+
+  .gallery-item img {
+    height: auto; /* let height adjust naturally */
+  }
+}
+
+/* 📲 Tablet (601px - 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+  .gallery-grid {
+    column-count: 2; /* 2 columns on tablet */
+  }
+}
+
+/* 💻 Laptop & large screens (900px and above) */
+@media (min-width: 901px) {
+  .gallery-grid {
+    column-count: 3; /* keep 3 columns on desktop */
+  }
+}
