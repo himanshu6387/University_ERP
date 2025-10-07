@@ -1,6 +1,7 @@
 // src/components/About/About.js
 import React, { useEffect, useRef } from 'react';
 import './About.css';
+import logo from '../../assets/logo.png'
 
 const About = () => {
   const aboutRef = useRef();
@@ -24,21 +25,26 @@ const About = () => {
   }, []);
 
   const missions = [
+    // {
+    //   icon: "🎓",
+    //   title: "World Class School & Center of Excellence",
+    //   description: "Creating an educational institution that rivals the best in the world, providing exceptional learning experiences."
+    // },
     {
       icon: "🎓",
-      title: "World Class School & Center of Excellence",
-      description: "Creating an educational institution that rivals the best in the world, providing exceptional learning experiences."
+      title: "Mission: मिशन",
+      description: "देशभर में “Education for All, Free for All” अभियान के माध्यम से एक ऐसी फीस-फ्री शिक्षा प्रणाली स्थापित करना, जिससे हर ज़रूरतमंद बच्चा निःशुल्क और गुणवत्तापूर्ण शिक्षा प्राप्त कर सके"
     },
-    {
-      icon: "👥",
-      title: "Community & Global Leaders",
-      description: "Nurturing students to become influential leaders who can make positive impacts in their communities and beyond."
-    },
-    {
-      icon: "🔬",
-      title: "STEM Learning & Innovation",
-      description: "Promoting Science, Technology, Engineering, and Mathematics education alongside innovation and entrepreneurship."
-    },
+    // {
+    //   icon: "👥",
+    //   title: "Community & Global Leaders",
+    //   description: "Nurturing students to become influential leaders who can make positive impacts in their communities and beyond."
+    // },
+    // {
+    //   icon: "🔬",
+    //   title: "STEM Learning & Innovation",
+    //   description: "Promoting Science, Technology, Engineering, and Mathematics education alongside innovation and entrepreneurship."
+    // },
     // {
     //   icon: "🧠",
     //   title: "21st Century Skills",
@@ -46,8 +52,8 @@ const About = () => {
     // },
     {
       icon: "⭐",
-      title: "Upright Character",
-      description: "Nurturing strong moral compass and character development through Islamic values and Tarbiyah."
+      title: "Vision: दृष्टिकोण",
+      description: "हर बच्चे को गुणवत्तापूर्ण और समान शिक्षा का अधिकार मिले, जहाँ आर्थिक स्थिति कभी भी शिक्षा के रास्ते की रुकावट न बने। हम ऐसा भारत बनाना चाहते हैं जहाँ हर बच्चा अपनी प्रतिभा और सपनों को खुलकर जी सके।"
     }
   ];
 
@@ -57,8 +63,7 @@ const About = () => {
         <div className="about-header fade-in">
           <h2 className="section-title">About Us</h2>
           <p className="section-subtitle">
-            We are dedicated to transforming the lives of underprivileged children by providing them with 
-            world-class education and opportunities that were once reserved for the privileged.
+           We are dedicated to transforming the lives of underprivileged children by providing them with world-class education and opportunities that were once reserved for the privileged.
           </p>
         </div>
 
@@ -67,9 +72,8 @@ const About = () => {
             <div className="intro-content">
               <h3>We are on the Mission to:</h3>
               <p>
-                At Umeed Global School, we believe that every child deserves access to quality education, 
-                regardless of their socioeconomic background. Our mission is to bridge the educational gap 
-                and create opportunities for underprivileged children to excel and become future leaders.
+                देशभर में “Education for All, Free for All” अभियान के माध्यम से एक ऐसी फीस-फ्री शिक्षा प्रणाली स्थापित करना, जिससे हर ज़रूरतमंद बच्चा निःशुल्क और गुणवत्तापूर्ण शिक्षा प्राप्त कर सके।
+
               </p>
               <div className="stats">
                 <div className="stat-item">
@@ -103,24 +107,35 @@ const About = () => {
           <div className="founder-content">
             <div className="founder-image">
               <img 
-                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                src={logo}
                 alt="Wali Rahmani - Founder"
                 className="founder-img"
               />
+              {/* <img 
+                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                alt="Wali Rahmani - Founder"
+                className="founder-img"
+              /> */}
             </div>
             <div className="founder-info">
-              <h3>Meet Our Founder</h3>
-              <h4>Wali Rahmani</h4>
-              <p className="founder-title">Social Activist & Lawyer</p>
+              {/* <h3>Meet Our Founder</h3> */}
+              <h3>Meet Our Mission</h3>
+              {/* <h4>Wali Rahmani</h4> */}
+              <h4>SRSV ED&W TRUST</h4>
+              {/* <p className="founder-title">Social Activist & Lawyer</p> */}
+              <p className="founder-title">TRUST Registration No . 377V/2023</p>
               <p className="founder-description">
-                At just 25 years old, Wali Rahmani from West Bengal has successfully crowdfunded 
+                {/* At just 25 years old, Wali Rahmani from West Bengal has successfully crowdfunded 
                 ₹6 crore in just 6 days for his vision of creating a "school of rich for poor". 
                 His dedication to providing quality English-medium education to underprivileged 
-                children has captured hearts across the nation.
+                children has captured hearts across the nation. */}
+
+
+                हमारा ट्रस्ट मानता है कि हर बच्चे को गुणवत्तापूर्ण और समान शिक्षा पाने का अधिकार है, चाहे उसकी आर्थिक स्थिति कैसी भी हो। शिक्षा सभी का मूल अधिकार होनी चाहिए। दुर्भाग्य से, भारत में कई बच्चे इसलिए पढ़ाई नहीं कर पाते क्योंकि उनके परिवार स्कूल की फीस वहन नहीं कर सकते। हम एक ऐसी शिक्षा प्रणाली बनाकर इसे बदलना चाहते हैं जिसमें कोई भी बच्चा पैसे की वजह से पढ़ाई से वंचित न रहे। हमारा उद्देश्य एक ऐसे भविष्य का निर्माण करना है जहाँ हर बच्चे को सीखने, आगे बढ़ने और अपनी असली प्रतिभा को खोजने का मौका मिले। अपने प्रयासों से, हम एक ऐसे भारत का निर्माण करना चाहते हैं जहाँ शिक्षा हर बच्चे के लिए अवसरों के द्वार खोले, उन्हें अपने सपने पूरे करने और समाज में सकारात्मक योगदान देने में मदद करे
               </p>
               <div className="founder-achievements">
                 <div className="achievement">
-                  <span className="achievement-number">₹6 Crore</span>
+                  <span className="achievement-number">₹2 Crore</span>
                   <span className="achievement-text">Raised in 6 Days</span>
                 </div>
                 <div className="achievement">

@@ -61,19 +61,19 @@ const Contact = () => {
               <div className="info-card">
                 <div className="info-icon">📍</div>
                 <h3>Location</h3>
-                <p>Basti Uttar Pradesh, India</p>
+                <p>Tinhari Mafi, Block  Semriyawan sant Kabir Nagar,Uttar Pradesh, India</p>
               </div>
               
               <div className="info-card">
                 <div className="info-icon">📧</div>
                 <h3>Email</h3>
-                <p>allaroundaid@gmail.com</p>
+                <p>srsv2600@gmail.com</p>
               </div>
               
               <div className="info-card">
                 <div className="info-icon">📞</div>
                 <h3>Phone</h3>
-                <p>Number:+91 73793 53250</p>
+                <p>Number:+91 70818 22600</p>
               </div>
               
               <div className="info-card">

@@ -2,6 +2,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './News.css';
 import ApiService from '../../services/api'; // adjust path
+import logo from '../../assets/logo.png'
 
 const News = () => {
   const newsRef = useRef();
@@ -19,18 +20,18 @@ const News = () => {
       publishDate: "2025-09-15",
       category: "Education",
       url: "#",
-      imageUrl: "https://via.placeholder.com/400x250"
+      imageUrl: ''
     },
-    {
-      id: 2,
-      title: "Volunteers Making a Difference",
-      description: "Meet the volunteers who are helping children achieve their dreams.",
-      source: "Daily News",
-      publishDate: "2025-09-10",
-      category: "Community",
-      url: "#",
-      imageUrl: "https://via.placeholder.com/400x250"
-    }
+    // {
+    //   id: 2,
+    //   title: "Volunteers Making a Difference",
+    //   description: "Meet the volunteers who are helping children achieve their dreams.",
+    //   source: "Daily News",
+    //   publishDate: "2025-09-10",
+    //   category: "Community",
+    //   url: "#",
+    //   imageUrl: "https://via.placeholder.com/400x250"
+    // }
   ];
 
   const fetchNews = async () => {
@@ -113,7 +114,7 @@ const News = () => {
     >
       <div className="news-image">
         <img 
-          src={article.imageUrl || "https://via.placeholder.com/400x250"} 
+          src={article.imageUrl ||logo} 
           alt={article.title} 
         />
         <div className="news-category">
@@ -158,15 +159,15 @@ const News = () => {
     Follow our progress and milestones as we build the future of education.
   </p>
   <div className="social-links">
-    <a href="#" className="social-link" aria-label="Facebook">
+    <a href="https://www.facebook.com/profile.php?id=61581879570840" className="social-link" aria-label="Facebook">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
         <path d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2v-3h2v-2.3c0-2 1.2-3.1 3-3.1.9 0 1.8.2 1.8.2v2h-1c-1 0-1.3.6-1.3 1.2V12h2.3l-.4 3h-1.9v7A10 10 0 0 0 22 12"/>
       </svg>
     </a>
-    <a href="#" className="social-link" aria-label="Twitter">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <path d="M22.46 6c-.77.35-1.5.5-2.3.6a4.1 4.1 0 0 0 1.8-2.3c-.8.5-1.6.8-2.5 1a4.2 4.2 0 0 0-7.2 3c0 .3 0 .6.1.8A11.8 11.8 0 0 1 3 4.6a4.1 4.1 0 0 0 1.3 5.5c-.7 0-1.3-.2-1.9-.5v.1a4.2 4.2 0 0 0 3.4 4.1c-.5.2-1 .2-1.5.2-.4 0-.7 0-1-.1a4.2 4.2 0 0 0 4 3A8.5 8.5 0 0 1 2 19.6a12 12 0 0 0 6.4 1.9c7.7 0 12-6.3 12-11.8v-.5c.8-.6 1.5-1.3 2-2.2"/>
-      </svg>
+    <a href="https://www.youtube.com/@srsvedwtrust" className="social-link" aria-label="Twitter">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+  <path d="M23.498 6.186a2.994 2.994 0 00-2.11-2.12C19.691 3.5 12 3.5 12 3.5s-7.691 0-9.388.566A2.994 2.994 0 00.502 6.186 31.03 31.03 0 000 12a31.03 31.03 0 00.502 5.814 2.994 2.994 0 002.11 2.12C4.309 20.5 12 20.5 12 20.5s7.691 0 9.388-.566a2.994 2.994 0 002.11-2.12A31.03 31.03 0 0024 12a31.03 31.03 0 00-.502-5.814zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/>
+</svg>
     </a>
     <a href="#" className="social-link" aria-label="LinkedIn">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">

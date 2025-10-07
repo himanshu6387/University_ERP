@@ -2,6 +2,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './DonationSection.css';
 import ApiService from '../../services/api';
+import scanner2 from '../../assets/scanner2.jpg'
 
 const DonationSection = () => {
   const [showQRModal, setShowQRModal] = useState(false);
@@ -168,7 +169,7 @@ const DonationSection = () => {
       <body>
         <div class="receipt">
           <div class="header">
-            <div class="logo">🎓 All Around School</div>
+            <div class="logo">🎓 SRSV ED&W TRUST</div>
             <div class="tagline">Hope for a Better Tomorrow</div>
             <h2 class="receipt-title">Donation Receipt</h2>
             <span class="receipt-id">Receipt #UGS${currentDonationId}</span>
@@ -227,9 +228,9 @@ const DonationSection = () => {
           </div>
 
           <div class="footer">
-            <p><strong>All Around School</strong></p>
-            <p>Email: allaroundaid@gmail.com | Phone: +91 73793 53250</p>
-            <p>Location: Basti, Uttar Pradesh, India</p>
+            <p><strong>SRSV ED&W TRUST</strong></p>
+            <p>Email: srsv2600@gmail.com | Phone: +91 70818 22600</p>
+            <p>Location: Tinhari Mafi,Block Semriyawan Sant Kabir Naga, Uttar Pradesh, India</p>
             <p style="margin-top: 15px; font-size: 11px;">This is a computer-generated receipt. Please keep this for your records.</p>
           </div>
         </div>
@@ -465,7 +466,7 @@ const DonationSection = () => {
 
       {/* QR Code Modal */}
       {showQRModal && (
-        <div className="modal-overlay">
+        <div className="modal-overlay" style={{marginTop:'50px'}}>
           <div className="qr-modal">
             <div className="modal-header">
               <h3>📱 Scan QR Code to Pay</h3>
@@ -480,7 +481,7 @@ const DonationSection = () => {
               
               <div className="qr-code-container">
                 <img 
-                  src="/your-qr-image.png" 
+                  src={scanner2} 
                   alt="UPI Payment QR Code" 
                   className="qr-image"
                   onError={(e) => {
