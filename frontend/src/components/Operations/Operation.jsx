@@ -1,6 +1,7 @@
 // src/components/Operations/Operations.js
 import React, { useEffect, useRef, useState } from 'react';
 import './Operations.css';
+import { Link } from 'react-router-dom';
 
 const Operations = () => {
   const operationsRef = useRef();
@@ -159,7 +160,7 @@ const Operations = () => {
             <h3>Ready to Join Our Mission?</h3>
             <p>Be part of creating educational opportunities for underprivileged children.</p>
             <div className="cta-buttons">
-              <button className="btn btn-primary">Apply for Admission</button>
+              <button className="btn btn-primary"><Link to={'/donation'}>Donate Now</Link></button>
               <button className="btn btn-outline">Become a Partner</button>
             </div>
           </div>

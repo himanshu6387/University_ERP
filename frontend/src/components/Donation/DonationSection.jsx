@@ -276,30 +276,30 @@ const DonationSection = () => {
               <div className="stat-card">
                 <div className="stat-icon">💰</div>
                 <div className="stat-content">
-                  <span className="stat-number">₹6+ Crore</span>
+                  <span className="stat-number">₹1+ Crore</span>
                   <span className="stat-label">Raised So Far</span>
                 </div>
               </div>
-              <div className="stat-card">
+              {/* <div className="stat-card">
                 <div className="stat-icon">👥</div>
                 <div className="stat-content">
                   <span className="stat-number">5000+</span>
                   <span className="stat-label">Generous Donors</span>
                 </div>
-              </div>
+              </div> */}
             </div>
             
             <div className="progress-section">
               <div className="progress-header">
                 <span>Fundraising Progress</span>
-                <span>60% Complete</span>
+                <span>10% Complete</span>
               </div>
               <div className="progress-bar">
-                <div className="progress-fill" style={{ width: '60%' }}></div>
+                <div className="progress-fill" style={{ width: '20%' }}></div>
               </div>
             </div>
             
-            <div className="impact-info">
+            {/* <div className="impact-info">
               <h3>Your Impact</h3>
               <div className="impact-items">
                 <div className="impact-item">
@@ -319,7 +319,7 @@ const DonationSection = () => {
                   <span className="impact-description">Helps set up a complete classroom with modern facilities</span>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
 
           <div className="donation-form-container slide-in-right">

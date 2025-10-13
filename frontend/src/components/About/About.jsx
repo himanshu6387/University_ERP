@@ -77,16 +77,16 @@ const About = () => {
               </p>
               <div className="stats">
                 <div className="stat-item">
-                  <span className="stat-number">₹6+ Crore</span>
-                  <span className="stat-label">Raised in 6 Days</span>
+                  <span className="stat-number">&#8377; 1cr+</span>
+                  <span className="stat-label">Donate By Founder</span>
                 </div>
                 <div className="stat-item">
-                  <span className="stat-number">1000+</span>
-                  <span className="stat-label">Future Students</span>
+                  <span className="stat-number">1200+</span>
+                  <span className="stat-label">Every Year Future Students</span>
                 </div>
                 <div className="stat-item">
-                  <span className="stat-number">50+</span>
-                  <span className="stat-label">Expert Teachers</span>
+                  <span className="stat-number">45+</span>
+                  <span className="stat-label">Expert Teachers in Future</span>
                 </div>
               </div>
             </div>
@@ -133,7 +133,7 @@ const About = () => {
 
                 हमारा ट्रस्ट मानता है कि हर बच्चे को गुणवत्तापूर्ण और समान शिक्षा पाने का अधिकार है, चाहे उसकी आर्थिक स्थिति कैसी भी हो। शिक्षा सभी का मूल अधिकार होनी चाहिए। दुर्भाग्य से, भारत में कई बच्चे इसलिए पढ़ाई नहीं कर पाते क्योंकि उनके परिवार स्कूल की फीस वहन नहीं कर सकते। हम एक ऐसी शिक्षा प्रणाली बनाकर इसे बदलना चाहते हैं जिसमें कोई भी बच्चा पैसे की वजह से पढ़ाई से वंचित न रहे। हमारा उद्देश्य एक ऐसे भविष्य का निर्माण करना है जहाँ हर बच्चे को सीखने, आगे बढ़ने और अपनी असली प्रतिभा को खोजने का मौका मिले। अपने प्रयासों से, हम एक ऐसे भारत का निर्माण करना चाहते हैं जहाँ शिक्षा हर बच्चे के लिए अवसरों के द्वार खोले, उन्हें अपने सपने पूरे करने और समाज में सकारात्मक योगदान देने में मदद करे
               </p>
-              <div className="founder-achievements">
+              {/* <div className="founder-achievements">
                 <div className="achievement">
                   <span className="achievement-number">₹2 Crore</span>
                   <span className="achievement-text">Raised in 6 Days</span>
@@ -142,7 +142,7 @@ const About = () => {
                   <span className="achievement-number">25 Years</span>
                   <span className="achievement-text">Young Visionary</span>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
