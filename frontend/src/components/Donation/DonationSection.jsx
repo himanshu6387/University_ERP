@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './DonationSection.css';
 import ApiService from '../../services/api';
-import scanner2 from '../../assets/scanner2.jpg'
+import { QRCodeSVG } from 'qrcode.react'; // Import QR code generator
 
 const DonationSection = () => {
   const [showQRModal, setShowQRModal] = useState(false);
@@ -23,6 +23,10 @@ const DonationSection = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const donationRef = useRef();
 
+  // UPI Configuration - UPDATE THESE WITH YOUR ACTUAL UPI DETAILS
+  const UPI_ID = "srsv2600@paytm"; // Replace with your actual UPI ID
+  const MERCHANT_NAME = "SRSV ED&W TRUST";
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -40,6 +44,19 @@ const DonationSection = () => {
 
     return () => observer.disconnect();
   }, []);
+
+  // Generate UPI payment URL with amount
+  const generateUPIUrl = (amount, purpose) => {
+    const params = new URLSearchParams({
+      pa: UPI_ID, // Payee Address (UPI ID)
+      pn: MERCHANT_NAME, // Payee Name
+      am: amount, // Amount
+      cu: 'INR', // Currency
+      tn: `Donation for ${purpose}`, // Transaction Note
+    });
+    
+    return `upi://pay?${params.toString()}`;
+  };
 
   const handleInputChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -64,7 +81,6 @@ const DonationSection = () => {
     setIsSubmitting(true);
 
     try {
-      // Save donor info to backend with pending status
       const response = await ApiService.submitDonation({
         ...donationData,
         status: 'pending',
@@ -72,8 +88,6 @@ const DonationSection = () => {
       });
 
       setCurrentDonationId(response.donation?.id || response.id || Date.now());
-      
-      // Show QR modal
       setShowQRModal(true);
     } catch (err) {
       console.error(err);
@@ -99,10 +113,8 @@ const DonationSection = () => {
     setIsVerifying(true);
 
     try {
-      // Simulate transaction verification (replace with actual verification logic)
       await new Promise(resolve => setTimeout(resolve, 2000));
       
-      // Update donation status
       const updatedDonation = {
         ...donationData,
         transactionId,
@@ -111,13 +123,9 @@ const DonationSection = () => {
         paymentDate: new Date().toISOString()
       };
 
-      // Generate and download receipt
       generateReceipt(updatedDonation);
-
-      // Success message
       alert('Payment verified successfully! Your donation receipt has been downloaded.');
       
-      // Reset form
       setDonationData({
         donorName: '',
         email: '',
@@ -141,7 +149,6 @@ const DonationSection = () => {
   };
 
   const generateReceipt = (donation) => {
-    // Create receipt HTML
     const receiptHTML = `
       <!DOCTYPE html>
       <html>
@@ -230,7 +237,7 @@ const DonationSection = () => {
           <div class="footer">
             <p><strong>SRSV ED&W TRUST</strong></p>
             <p>Email: srsv2600@gmail.com | Phone: +91 70818 22600</p>
-            <p>Location: Tinhari Mafi,Block Semriyawan Sant Kabir Naga, Uttar Pradesh, India</p>
+            <p>Location: Tinhari Mafi,Block Semriyawan Sant Kabir Naga, Uttar Pradesh, India</p>
             <p style="margin-top: 15px; font-size: 11px;">This is a computer-generated receipt. Please keep this for your records.</p>
           </div>
         </div>
@@ -238,7 +245,6 @@ const DonationSection = () => {
       </html>
     `;
 
-    // Create and download receipt
     const blob = new Blob([receiptHTML], { type: 'text/html' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
@@ -280,13 +286,6 @@ const DonationSection = () => {
                   <span className="stat-label">Raised So Far</span>
                 </div>
               </div>
-              {/* <div className="stat-card">
-                <div className="stat-icon">👥</div>
-                <div className="stat-content">
-                  <span className="stat-number">5000+</span>
-                  <span className="stat-label">Generous Donors</span>
-                </div>
-              </div> */}
             </div>
             
             <div className="progress-section">
@@ -298,35 +297,12 @@ const DonationSection = () => {
                 <div className="progress-fill" style={{ width: '20%' }}></div>
               </div>
             </div>
-            
-            {/* <div className="impact-info">
-              <h3>Your Impact</h3>
-              <div className="impact-items">
-                <div className="impact-item">
-                  <span className="impact-amount">₹1,000</span>
-                  <span className="impact-description">Provides books and stationery for one student for a year</span>
-                </div>
-                <div className="impact-item">
-                  <span className="impact-amount">₹5,000</span>
-                  <span className="impact-description">Sponsors school uniform and meals for one student</span>
-                </div>
-                <div className="impact-item">
-                  <span className="impact-amount">₹25,000</span>
-                  <span className="impact-description">Covers complete education expenses for one student for a year</span>
-                </div>
-                <div className="impact-item">
-                  <span className="impact-amount">₹1,00,000</span>
-                  <span className="impact-description">Helps set up a complete classroom with modern facilities</span>
-                </div>
-              </div>
-            </div> */}
           </div>
 
           <div className="donation-form-container slide-in-right">
             <form onSubmit={handleSubmit} className="donation-form">
               <h3>Make a Donation</h3>
               
-              {/* Quick Amounts */}
               <div className="quick-amounts">
                 <label>Quick Amount Selection:</label>
                 <div className="amount-buttons">
@@ -343,7 +319,6 @@ const DonationSection = () => {
                 </div>
               </div>
 
-              {/* Form Fields */}
               <div className="form-row">
                 <div className="form-group">
                   <label>Custom Amount (₹)</label>
@@ -464,7 +439,7 @@ const DonationSection = () => {
         </div>
       </div>
 
-      {/* QR Code Modal */}
+      {/* QR Code Modal with Dynamic QR */}
       {showQRModal && (
         <div className="modal-overlay" style={{marginTop:'50px'}}>
           <div className="qr-modal">
@@ -477,18 +452,26 @@ const DonationSection = () => {
               <div className="payment-info">
                 <p><strong>Amount to Pay: ₹{donationData.amount}</strong></p>
                 <p>Purpose: {donationData.purpose}</p>
+                <p style={{fontSize: '14px', color: '#666'}}>UPI ID: {UPI_ID}</p>
               </div>
               
               <div className="qr-code-container">
-                <img 
-                  src={scanner2} 
-                  alt="UPI Payment QR Code" 
-                  className="qr-image"
-                  onError={(e) => {
-                    e.target.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSIjY2NjIi8+Cjx0ZXh0IHg9IjEwMCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNjY2Ij5RUiBDb2RlPC90ZXh0Pgo8L3N2Zz4K';
+                {/* Dynamic QR Code with amount pre-filled */}
+                <QRCodeSVG 
+                  value={generateUPIUrl(donationData.amount, donationData.purpose)}
+                  size={256}
+                  level="H"
+                  includeMargin={true}
+                  style={{ 
+                    border: '10px solid white',
+                    borderRadius: '10px',
+                    boxShadow: '0 4px 6px rgba(0,0,0,0.1)'
                   }}
                 />
-                <p className="qr-instruction">Scan this QR code with any UPI app</p>
+                <p className="qr-instruction">
+                  Scan this QR code with any UPI app<br/>
+                  <strong>Amount will be automatically filled: ₹{donationData.amount}</strong>
+                </p>
               </div>
 
               <div className="payment-steps">
@@ -498,15 +481,15 @@ const DonationSection = () => {
                 </div>
                 <div className="step">
                   <span className="step-number">2</span>
-                  <span>Pay ₹{donationData.amount}</span>
+                  <span>Amount (₹{donationData.amount}) will be pre-filled</span>
                 </div>
                 <div className="step">
                   <span className="step-number">3</span>
-                  <span>Copy transaction ID from your app</span>
+                  <span>Complete payment in your app</span>
                 </div>
                 <div className="step">
                   <span className="step-number">4</span>
-                  <span>Enter transaction ID in next step</span>
+                  <span>Copy transaction ID and verify</span>
                 </div>
               </div>
 
