@@ -264,7 +264,7 @@ const DonationSection = () => {
         <div className="donation-header fade-in">
           <h2 className="section-title">Support Our Mission</h2>
           <p className="section-subtitle">
-            Your contribution helps us provide world-class education to underprivileged children.
+            Your contribution helps us provide world-class education to <b>Economical Poor</b> children.
             Every rupee makes a difference in shaping their future.
           </p>
         </div>
@@ -299,7 +299,7 @@ const DonationSection = () => {
             </div>
           </div>
 
-          <div className="donation-form-container slide-in-right">
+          <div className="donation-form-container slide-in-right" id='form1'>
             <form onSubmit={handleSubmit} className="donation-form">
               <h3>Make a Donation</h3>
               

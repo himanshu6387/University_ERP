@@ -87,21 +87,21 @@ const About = () => {
               <div className="stats">
                 <div className="stat-item">
                   <span className="stat-number">&#8377; 1cr+</span>
-                  <span className="stat-label">Donate By Founder</span>
+                  <span className="stat-label">Donation By Founder</span>
                 </div>
                 <div className="stat-item">
-                  <span className="stat-number">1200+</span>
-                  <span className="stat-label">Every Year Future Students</span>
+                  <span className="stat-number">400+</span>
+                  <span className="stat-label">Students Every Year</span>
                 </div>
                 <div className="stat-item">
                   <span className="stat-number">45+</span>
-                  <span className="stat-label">Expert Teachers in Future</span>
+                  <span className="stat-label">Expert Staff</span>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="mission-grid slide-in-right">
+          <div className="mission-grid slide-in-right" id='mission-part'>
             {missions.map((mission, index) => (
               <div key={index} className="mission-card fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
                 <div className="mission-icon">{mission.icon}</div>
@@ -120,6 +120,10 @@ const About = () => {
                 alt="Wali Rahmani - Founder"
                 className="founder-img"
               />
+              <div className='intro'>
+                <h1>Pravesh Kumar Varun</h1>
+                <h1>Founder & Managing Trustee State Government Awarded</h1>
+              </div>
               {/* <img 
                 src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
                 alt="Wali Rahmani - Founder"

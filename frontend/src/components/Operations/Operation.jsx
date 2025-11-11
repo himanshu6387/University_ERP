@@ -31,9 +31,9 @@ const Operations = () => {
       title: 'Academics',
       icon: '📚',
       image: 'https://images.unsplash.com/photo-1577896851231-70ef18881754?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-      description: 'We provide a CBSE curriculum focusing on discussions, debates, outcome-based, and interdisciplinary learning.',
+      description: 'Learning from Class 3rd to 12th Students',
       features: [
-        'CBSE Curriculum aligned with national standards',
+        '3rd Standard to 12th Standard',
         'Interactive discussions and debates in every class',
         'Outcome-based learning methodology',
         'Interdisciplinary approach to education',
@@ -41,9 +41,9 @@ const Operations = () => {
         'Digital learning resources and smart classrooms'
       ],
       highlights: [
-        { label: 'Student-Teacher Ratio', value: '15:1' },
+        { label: 'Student-Teacher Ratio', value: '20:1' },
         { label: 'Languages Offered', value: '4+' },
-        { label: 'Success Rate', value: '95%' }
+        // { label: 'Success Rate', value: '95%' }
       ]
     },
     {
@@ -51,19 +51,19 @@ const Operations = () => {
       title: 'Residential Programme',
       icon: '🏠',
       image: 'https://images.unsplash.com/photo-1555854877-bab0e564b8d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80',
-      description: 'At Umeed Global School, we believe holistic development thrives in an immersive environment.',
+      // description: 'At Umeed Global School, we believe holistic development thrives in an immersive environment.',
       features: [
         'Safe and secure residential facilities',
-        '12-hour comprehensive academic and activity system',
+        '10-hour comprehensive academic and activity system',
         'Mentorship and character development programs',
         'Life skills training and personality development',
         'Recreational activities and sports programs',
         'Healthy meals and nutrition programs'
       ],
       highlights: [
-        { label: 'Hostel Capacity', value: '500+' },
-        { label: 'Staff Supervision', value: '24/7' },
-        { label: 'Activity Hours', value: '12/day' }
+        { label: 'Complete Hostel Capacity', value: '400+' },
+        { label: 'Hostel Staff Supervision', value: '24/7' },
+        // { label: 'Activity Hours', value: '12/day' }
       ]
     },
     {
@@ -158,10 +158,10 @@ const Operations = () => {
         <div className="operations-cta fade-in">
           <div className="cta-content">
             <h3>Ready to Join Our Mission?</h3>
-            <p>Be part of creating educational opportunities for underprivileged children.</p>
+            <p>Be part of creating educational opportunities for <b>Economical Poor</b> children.</p>
             <div className="cta-buttons">
-              <button className="btn btn-primary"><Link to={'/donation'}>Donate Now</Link></button>
-              <button className="btn btn-outline">Become a Partner</button>
+              <Link to={'/donation'}><button className="btn btn-primary" onClick={'form1'}>Donate Now</button></Link>
+              {/* <button className="btn btn-outline">Become a Partner</button> */}
             </div>
           </div>
         </div>

@@ -158,6 +158,24 @@
   text-align: center;
 }
 
+.intro{
+  background-color: green;
+  font-weight: bold;
+  color: white;
+  border: 5px solid goldenrod;
+  border-radius: 20px;
+  width: 240px;
+  margin-top: 10px;
+  margin-left: -15px;
+  font-size: 18px;
+  box-shadow:  0 0 10px 4px gray;
+}
+
+.intro h1{
+  letter-spacing: 1px;
+  word-spacing:2px;
+}
+
 .founder-img {
   width: 180px;
   height: 180px;

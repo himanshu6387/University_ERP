@@ -2,6 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Footer.css';
+import logo from '../../assets/logo.png'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -23,12 +24,13 @@ const Footer = () => {
         <div className="footer-content">
           <div className="footer-section">
             <div className="footer-logo">
-              <img src="https://static.vecteezy.com/system/resources/previews/018/902/537/original/university-college-school-badge-logo-design-image-education-badge-logo-design-university-high-school-emblem-free-vector.jpg" alt="Umeed Global School" className="footer-logo-img" />
+              <img src={logo} alt="Umeed Global School" className="footer-logo-img" />
               <h3>SRSV ED&W TRUST</h3>
             </div>
             <p className="footer-description">
-              Empowering the next generation of community and global leaders through
-              world-class education for underprivileged children.
+              {/* Empowering the next generation of community and global leaders through
+              world-class education for underprivileged children. */}
+              This noble and compassionate initiative by SRSV Educational & Welfare Trust is dedicated to 400 meritorious and economically underprivileged students — irrespective of their caste or religion. Through this mission, they will be provided with free food, accommodation, and world-class education every year, empowering them to fulfill their dreams and spread new light and inspiration throughout society
             </p>
             <div className="social-links">
               <a href="https://www.facebook.com/profile.php?id=61581879570840" className="social-link" aria-label="Facebook">
@@ -71,9 +73,9 @@ const Footer = () => {
             <ul className="footer-links">
               <li><button onClick={() => scrollToSection('donate')}>Donate Now</button></li>
               <li><Link to="/contact" onClick={scrollToTop}>Contact Us</Link></li>
-              <li><a href="#">Volunteer</a></li>
+              {/* <li><a href="#">Volunteer</a></li>
               <li><a href="#">Partner with Us</a></li>
-              <li><a href="#">Apply for Admission</a></li>
+              <li><a href="#">Apply for Admission</a></li> */}
               <li><Link to={'/adminLogin'}>Login</Link></li>
             </ul>
           </div>
@@ -83,7 +85,7 @@ const Footer = () => {
             <div className="contact-info">
               <div className="contact-item">
                 <span className="contact-icon">📍</span>
-                <span>Tinhari Mafi,Block Semriyawan Sant Kabir Nagar 272126 ,Uttar Pradesh, India</span>
+                <span>Near Tinhari Mafi,Bigra Awwal Block Semriyawan Sant Kabir Nagar 272126 ,Uttar Pradesh, India</span>
               </div>
               <div className="contact-item">
                 <span className="contact-icon">📧</span>
