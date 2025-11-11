@@ -24,7 +24,7 @@ const DonationSection = () => {
   const donationRef = useRef();
 
   // UPI Configuration - UPDATE THESE WITH YOUR ACTUAL UPI DETAILS
-  const UPI_ID = "srsv2600@paytm"; // Replace with your actual UPI ID
+  const UPI_ID = "918736822600@sbi"; // Replace with your actual UPI ID
   const MERCHANT_NAME = "SRSV ED&W TRUST";
 
   useEffect(() => {
