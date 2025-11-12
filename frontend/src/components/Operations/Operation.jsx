@@ -71,7 +71,7 @@ const Operations = () => {
       title: 'Innovation & Technology',
       icon: '🔬',
       image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-      description: 'We believe that innovation and scientific curiosity are the cornerstones of a progressive education system.',
+      // description: 'We believe that innovation and scientific curiosity are the cornerstones of a progressive education system.',
       features: [
         'State-of-the-art science and computer laboratories',
         'STEM-focused curriculum and projects',
