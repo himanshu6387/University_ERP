@@ -81,9 +81,9 @@ const Operations = () => {
         'Entrepreneurship development programs'
       ],
       highlights: [
-        { label: 'Tech Labs', value: '8+' },
-        { label: 'STEM Projects', value: '50+/year' },
-        { label: 'Innovation Awards', value: '10+' }
+        // { label: 'Tech Labs', value: '8+' },
+        // { label: 'STEM Projects', value: '50+/year' },
+        // { label: 'Innovation Awards', value: '10+' }
       ]
     }
   ];

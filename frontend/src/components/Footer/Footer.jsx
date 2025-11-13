@@ -97,13 +97,13 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="newsletter">
+            {/* <div className="newsletter">
               <h5>Subscribe to Updates</h5>
               <div className="newsletter-form">
                 <input type="email" placeholder="Enter your email" />
                 <button className="btn btn-primary">Subscribe</button>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
 
