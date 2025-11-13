@@ -61,7 +61,7 @@ const Contact = () => {
               <div className="info-card">
                 <div className="info-icon">📍</div>
                 <h3>Location</h3>
-                <p>Tinhari Mafi, Block  Semriyawan sant Kabir Nagar,Uttar Pradesh, India</p>
+                <p><b>Near:</b> Tinhari Mafi,Bigra Awwal, Block Semriyawan SantKabir Nagar 272126, Uttar Pradesh, India</p>
               </div>
               
               <div className="info-card">

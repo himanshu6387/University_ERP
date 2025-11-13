@@ -231,13 +231,13 @@ const DonationSection = () => {
 
           <div class="thank-you">
             <h3 style="color: #2e7d32; margin-bottom: 10px;">🙏 Thank You!</h3>
-            <p style="margin: 0; color: #333;">Your donation will help us provide world-class education to underprivileged children and create future leaders.</p>
+            <p style="margin: 0; color: #333;">Your donation will help us provide world-class education to Economical Poor children and create future leaders.</p>
           </div>
 
           <div class="footer">
             <p><strong>SRSV ED&W TRUST</strong></p>
             <p>Email: srsv2600@gmail.com | Phone: +91 70818 22600</p>
-            <p>Location: Tinhari Mafi,Block Semriyawan Sant Kabir Naga, Uttar Pradesh, India</p>
+            <p>Location: Near Tinhari Mafi,Bigra Awwal, Block Semriyawan SantKabir Nagar 272126, Uttar Pradesh, India</p>
             <p style="margin-top: 15px; font-size: 11px;">This is a computer-generated receipt. Please keep this for your records.</p>
           </div>
         </div>

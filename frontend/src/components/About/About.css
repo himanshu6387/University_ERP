@@ -3,6 +3,8 @@
   position: relative;
 }
 
+
+
 .about::before {
   content: '';
   position: absolute;

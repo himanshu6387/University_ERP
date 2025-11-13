@@ -109,7 +109,7 @@ const Header = () => {
                   </div>
                 </li>
                 <li className="nav-item dropdown">
-                  <span className="nav-link dropdown-toggle">People ▾</span>
+                  <span className="nav-link dropdown-toggle">Mentors ▾</span>
                   <div className="dropdown-menu">
                     <Link to="/faculty" onClick={closeMenu}>Faculty</Link>
                     <Link to="/staff" onClick={closeMenu}>Staff</Link>
@@ -117,7 +117,11 @@ const Header = () => {
                   </div>
                 </li>
                 <li className="nav-item dropdown">
-                  <a href="#mission-part" onClick={closeMenu}><span className="nav-link dropdown-toggle">Our Mission</span></a>
+                  <span className="nav-link dropdown-toggle">Mission ▾</span>
+                  <div className="dropdown-menu">
+                    <Link to={'/new-mission'} onClick={closeMenu}>Our Mission</Link>
+                    <Link to="/model-education" onClick={closeMenu}>Model of Education</Link>
+                  </div>
                 </li>
                 <li className="nav-item">
                   <Link to="/contact" className="nav-link" onClick={closeMenu}>
