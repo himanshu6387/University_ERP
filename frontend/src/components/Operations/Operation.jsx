@@ -94,8 +94,8 @@ const Operations = () => {
         <div className="operations-header fade-in">
           <h2 className="section-title">What We Do</h2>
           <p className="section-subtitle">
-            At All Around School, we strive to nurture all our students into individuals 
-            with a strong civic sense and a solid moral compass.
+            {/* At All Around School, we strive to nurture all our students into individuals 
+            with a strong civic sense and a solid moral compass. */}
           </p>
         </div>
 
