@@ -132,6 +132,7 @@ const Footer = () => {
         <div className="footer-bottom">
           <div className="footer-bottom-content">
             <p>&copy; {currentYear} SRSV ED&W Trust. All rights reserved.</p>
+            <p>Developed By <a href="https://allaroundaid.com">AllAroundAid</a></p>
             <div className="footer-bottom-links">
               <a href="#">Privacy Policy</a>
               <a href="#">Terms of Service</a>
