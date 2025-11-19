@@ -16,6 +16,7 @@ import About from './components/About/About';
 import DonationSection from './components/Donation/DonationSection';
 import EducationModel from './pages/EducationModel';
 import NewMission from './pages/NewMission';
+import NewSection from './pages/NewSection';
 // import ScrollToTop from './components/common/ScrollToTop';
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
             <Route path="/donation" element={<DonationSection/>} />
             <Route path="/model-education" element={<EducationModel/>} />
             <Route path="/new-mission" element={<NewMission/>} />
+            <Route path="/new-section" element={<NewSection/>} />
           </Routes>
         </main>
         <Footer />

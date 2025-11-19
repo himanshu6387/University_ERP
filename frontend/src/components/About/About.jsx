@@ -94,7 +94,7 @@ const About = () => {
               <p>
                 देशभर में “Education for All, Free for All” अभियान के माध्यम से एक ऐसी फीस-फ्री शिक्षा प्रणाली स्थापित करना, जिससे हर ज़रूरतमंद बच्चा निःशुल्क और गुणवत्तापूर्ण शिक्षा प्राप्त कर सके।
 
-                This noble and compassionate initiative by SRSV Educational & Welfare Trust is dedicated to 400 meritorious and economically underprivileged students — irrespective of their caste or religion. Through this mission, they will be provided with free food, accommodation, and world-class education every year, empowering them to fulfill their dreams and spread new light and inspiration throughout society.
+                This noble and compassionate initiative by SRSV Educational & Welfare Trust is dedicated to 400 meritorious and economically Economical Poor students — irrespective of their caste or religion. Through this mission, they will be provided with free food, accommodation, and world-class education every year, empowering them to fulfill their dreams and spread new light and inspiration throughout society.
 
               </p>
               <div className="stats">

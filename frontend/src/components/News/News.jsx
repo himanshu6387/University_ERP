@@ -195,7 +195,7 @@ const News = () => {
               </a>
 
 
-    <a href="#" className="social-link" aria-label="Instagram">
+    <a href="https://www.instagram.com/srsvedwtrust/" className="social-link" aria-label="Instagram">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
         <path d="M7 2C4 2 2 4 2 7v10c0 3 2 5 5 5h10c3 0 5-2 5-5V7c0-3-2-5-5-5zM7 4h10c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3m10.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10m0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6"/>
       </svg>

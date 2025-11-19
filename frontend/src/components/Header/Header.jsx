@@ -153,7 +153,7 @@ const Header = () => {
                     </a>
 
                     {/* Instagram */}
-                    <a href="#" className="social-link instagram" aria-label="Instagram">
+                    <a href="https://www.instagram.com/srsvedwtrust/" className="social-link instagram" aria-label="Instagram">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"

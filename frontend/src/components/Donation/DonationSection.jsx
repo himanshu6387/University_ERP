@@ -410,7 +410,7 @@ const DonationSection = () => {
                 />
               </div>
 
-              <div className="form-group checkbox-group">
+              {/* <div className="form-group checkbox-group">
                 <label className="checkbox-label">
                   <input
                     type="checkbox"
@@ -421,7 +421,7 @@ const DonationSection = () => {
                   <span className="checkmark"></span>
                   I wish to remain anonymous
                 </label>
-              </div>
+              </div> */}
 
               <button
                 type="submit"
