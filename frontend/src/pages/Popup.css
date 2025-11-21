@@ -1,0 +1,278 @@
+/* ===== Overlay ===== */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* ===== Popup Container ===== */
+.popup-container {
+  position: relative;
+  width: 85%;
+  height: 75%;
+  max-width: 1000px;
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 22px;
+  padding: 40px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  overflow-y: auto;
+  animation: scaleUp 0.35s ease-out;
+}
+
+/* ===== Close Button ===== */
+.popup-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #f5f5f5;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.25s ease;
+}
+
+.popup-close-btn:hover {
+  background: #e2e2e2;
+  transform: rotate(90deg);
+}
+
+.close-icon {
+  width: 26px;
+  height: 26px;
+  color: #333;
+}
+
+/* ===== Header ===== */
+.popup-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.popup-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 18px auto;
+  background: white;
+  border-radius: 50%;
+  border: 2px solid #eaeaea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #222;
+}
+
+.popup-subtitle {
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 8px;
+}
+
+/* ===== Body ===== */
+.popup-body {
+  margin: 20px 0 35px 0;
+  text-align: center;
+  padding: 0 30px;
+}
+
+.popup-text {
+  font-size: 1.3rem;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.popup-text-small {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+/* ===== Buttons ===== */
+.popup-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.popup-btn {
+  padding: 14px 32px;
+  font-size: 1.1rem;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: 0.25s ease-in-out;
+  font-weight: 600;
+}
+
+.popup-btn-primary {
+  background: #007bff;
+  color: white;
+}
+
+.popup-btn-primary:hover {
+  background: #0064d1;
+}
+
+.popup-btn-secondary {
+  background: #e9e9e9;
+  color: #333;
+}
+
+.popup-btn-secondary:hover {
+  background: #d6d6d6;
+}
+
+/* ===== FOOTER SECTION ===== */
+.popup-footer-section {
+  margin-top: 40px;
+  padding-top: 25px;
+  border-top: 1px solid #ddd;
+  text-align: center;
+}
+
+/* ===== Social Media ===== */
+.follow-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #222;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin: 12px 0;
+}
+
+.social-icon {
+  font-size: 1.8rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  transition: 0.3s ease;
+}
+
+.social-icon.whatsapp {
+  background: #25d366;
+}
+
+.social-icon.youtube {
+  background: #ff0000;
+}
+
+.social-icon.instagram {
+  background: radial-gradient(circle at 30% 30%, #fdf497, #fd5949, #d6249f, #285aeb);
+}
+
+.social-icon:hover {
+  transform: scale(1.12);
+}
+
+.social-caption {
+  margin-top: 10px;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* ===== Donation Section ===== */
+.donation-box {
+  margin: 30px 0 15px;
+}
+
+.donation-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #222;
+}
+
+.quick-donate-btn {
+  background: #ff7d00;
+  color: white;
+  padding: 14px 32px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: 0.25s;
+}
+
+.quick-donate-btn:hover {
+  background: #e06d00;
+}
+
+/* ===== Brochure Download Button ===== */
+.brochure-section {
+  margin-top: 20px;
+}
+
+.download-brochure-btn {
+  background: #007bff;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: 0.3s ease;
+  display: inline-block;
+}
+
+.download-brochure-btn:hover {
+  background: #0066d0;
+}
+
+/* ===== Scrollbar Style ===== */
+.popup-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.popup-container::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 8px;
+}
+
+.popup-container::-webkit-scrollbar-thumb:hover {
+  background: #bbb;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.90);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

@@ -11,19 +11,28 @@ const NewSection = () => {
   return (
     <>
       <style>{`
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+
         .section-container {
           display: flex;
           align-items: center;
           justify-content: center;
           min-height: 100vh;
           background: linear-gradient(135deg, #e0f2fe 0%, #bfdbfe 100%);
-          padding: 40px;
+          padding: 20px;
+          width: 100%;
+          overflow: hidden;
         }
 
         .circle-layout {
           position: relative;
-          width: 600px;
-          height: 600px;
+          width: 100%;
+          max-width: 600px;
+          aspect-ratio: 1 / 1;
         }
 
         .center-logo {
@@ -32,41 +41,48 @@ const NewSection = () => {
           left: 50%;
           transform: translate(-50%, -50%);
           z-index: 10;
+          width: 32%;
+          height: 32%;
         }
 
         .logo-circle {
-          width: 192px;
-          height: 192px;
+          width: 110%;
+          height: 100%;
           border-radius: 50%;
           background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
-          box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
           display: flex;
           align-items: center;
           justify-content: center;
-          border: 4px solid #f59e0b;
+          border: 0.3vw solid #f59e0b;
+          border-width: clamp(3px, 0.5vw, 6px);
+          padding: 5%;
         }
 
         .logo-content {
           text-align: center;
           color: #fbbf24;
+          width: 100%;
         }
 
         .logo-title {
           font-weight: bold;
-          font-size: 18px;
-          margin-bottom: 8px;
+          font-size: clamp(10px, 1.8vw, 16px);
+          margin-bottom: 5%;
+          line-height: 1.2;
+          padding:5px;
         }
 
         .tree-container {
           display: flex;
           align-items: center;
           justify-content: center;
-          margin: 12px 0;
+          margin: 8% 0;
         }
 
         .tree-trunk {
-          width: 12px;
-          height: 32px;
+          width: clamp(8px, 1.5vw, 14px);
+          height: clamp(20px, 3.5vw, 35px);
           background-color: #d97706;
           border-radius: 2px;
           position: relative;
@@ -74,16 +90,16 @@ const NewSection = () => {
 
         .tree-leaves {
           position: absolute;
-          top: -8px;
+          top: -25%;
           left: 50%;
           transform: translateX(-50%);
           display: flex;
-          gap: 4px;
+          gap: 2px;
         }
 
         .leaf {
-          width: 6px;
-          height: 12px;
+          width: clamp(4px, 0.8vw, 7px);
+          height: clamp(8px, 1.5vw, 14px);
           background-color: #22c55e;
           border-radius: 50%;
         }
@@ -96,54 +112,55 @@ const NewSection = () => {
 
         .logo-subtitle {
           font-weight: 600;
-          font-size: 14px;
+          font-size: clamp(8px, 1.4vw, 13px);
         }
 
         .circular-box {
           position: absolute;
-          width: 160px;
-          height: 160px;
+          width: 26.67%;
+          height: 26.67%;
           border-radius: 50%;
           background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
-          box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
           display: flex;
           align-items: center;
           justify-content: center;
-          border: 4px solid white;
+          border: clamp(2px, 0.4vw, 4px) solid white;
           transition: all 0.3s ease;
         }
 
         .circular-box:hover {
           transform: scale(1.1);
-          box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
+          box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
         }
 
         .box-text {
           color: white;
           font-weight: bold;
           text-align: center;
-          padding: 0 16px;
-          font-size: 18px;
+          padding: 0 10%;
+          font-size: clamp(11px, 1.8vw, 18px);
+          line-height: 1.3;
         }
 
         .top-left {
-          top: 32px;
-          left: 32px;
+          top: 5.33%;
+          left: 5.33%;
         }
 
         .top-right {
-          top: 32px;
-          right: 32px;
+          top: 5.33%;
+          right: 5.33%;
         }
 
         .bottom-left {
-          bottom: 32px;
-          left: 32px;
+          bottom: 5.33%;
+          left: 5.33%;
         }
 
         .bottom-right {
-          bottom: 32px;
-          right: 32px;
+          bottom: 5.33%;
+          right: 5.33%;
         }
 
         .connecting-lines {
@@ -161,6 +178,41 @@ const NewSection = () => {
           stroke-dasharray: 5, 5;
           opacity: 0.3;
         }
+
+        /* Mobile specific adjustments */
+        @media (max-width: 768px) {
+          .section-container {
+            padding: 15px;
+          }
+
+          .connecting-lines {
+            display: none;
+          }
+
+          .logo-circle {
+            padding: 8%;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .section-container {
+            padding: 10px;
+          }
+
+          .center-logo {
+            width: 35%;
+            height: 35%;
+          }
+
+          .circular-box {
+            width: 28%;
+            height: 28%;
+          }
+
+          .logo-circle {
+            padding: 6%;
+          }
+        }
       `}</style>
 
       <div className="section-container">
@@ -169,7 +221,7 @@ const NewSection = () => {
           <div className="center-logo">
             <div className="logo-circle">
               <div className="logo-content">
-                <div className="logo-title">SRSV ED & W TRUST</div>
+                <div className="logo-title">SRSV EDUCATIONAL AND WELFARE TRUST</div>
                 <div className="tree-container">
                   <div className="tree-trunk">
                     <div className="tree-leaves">
@@ -194,11 +246,11 @@ const NewSection = () => {
           ))}
 
           {/* Connecting Lines */}
-          <svg className="connecting-lines">
-            <line className="connecting-line" x1="120" y1="120" x2="300" y2="300" />
-            <line className="connecting-line" x1="480" y1="120" x2="300" y2="300" />
-            <line className="connecting-line" x1="120" y1="480" x2="300" y2="300" />
-            <line className="connecting-line" x1="480" y1="480" x2="300" y2="300" />
+          <svg className="connecting-lines" viewBox="0 0 600 600" preserveAspectRatio="none">
+            <line className="connecting-line" x1="20%" y1="20%" x2="50%" y2="50%" />
+            <line className="connecting-line" x1="80%" y1="20%" x2="50%" y2="50%" />
+            <line className="connecting-line" x1="20%" y1="80%" x2="50%" y2="50%" />
+            <line className="connecting-line" x1="80%" y1="80%" x2="50%" y2="50%" />
           </svg>
         </div>
       </div>

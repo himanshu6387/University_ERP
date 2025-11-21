@@ -1,5 +1,5 @@
 // src/App.js
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header/Header';
 import Home from './pages/Home';
@@ -10,16 +10,33 @@ import Footer from './components/Footer/Footer';
 import './App.css';
 import AdminLogin from './pages/AdminLogin';
 import AdminDashboard from './pages/AdminDashboard';
-import {Toaster} from 'react-hot-toast'
+import { Toaster } from 'react-hot-toast';
 import Gallery from './components/Gallery/Gallery';
 import About from './components/About/About';
 import DonationSection from './components/Donation/DonationSection';
 import EducationModel from './pages/EducationModel';
 import NewMission from './pages/NewMission';
 import NewSection from './pages/NewSection';
+import Popup from './pages/Popup'; // Import Popup component
 // import ScrollToTop from './components/common/ScrollToTop';
 
 function App() {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+  useEffect(() => {
+    // Open popup after 2 seconds when app loads
+    const timer = setTimeout(() => {
+      setIsPopupOpen(true);
+    }, 2000);
+
+    // Cleanup timer
+    return () => clearTimeout(timer);
+  }, []);
+
+  const closePopup = () => {
+    setIsPopupOpen(false);
+  };
+
   return (
     <Router>
       <div className="App">
@@ -34,15 +51,18 @@ function App() {
             <Route path="/adminDashboard" element={<AdminDashboard />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/about" element={<About />} />
-            <Route path="/donation" element={<DonationSection/>} />
-            <Route path="/model-education" element={<EducationModel/>} />
-            <Route path="/new-mission" element={<NewMission/>} />
-            <Route path="/new-section" element={<NewSection/>} />
+            <Route path="/donation" element={<DonationSection />} />
+            <Route path="/model-education" element={<EducationModel />} />
+            <Route path="/new-mission" element={<NewMission />} />
+            <Route path="/new-section" element={<NewSection />} />
           </Routes>
         </main>
         <Footer />
         {/* <ScrollToTop/> */}
-        <Toaster/>
+        <Toaster />
+        
+        {/* Popup Component */}
+        <Popup isOpen={isPopupOpen} onClose={closePopup} />
       </div>
     </Router>
   );
