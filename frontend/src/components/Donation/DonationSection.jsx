@@ -153,31 +153,65 @@ const DonationSection = () => {
       <!DOCTYPE html>
       <html>
       <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Donation Receipt</title>
         <style>
           body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background: #f5f5f5; }
           .receipt { max-width: 600px; margin: 0 auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 0 20px rgba(0,0,0,0.1); }
           .header { text-align: center; border-bottom: 2px solid #ffc107; padding-bottom: 20px; margin-bottom: 30px; }
-          .logo { font-size: 24px; font-weight: bold; color: #333; margin-bottom: 5px; }
+          .logo { font-size: 24px; font-weight: bold; color: #333; margin-bottom: 5px; display: flex; align-items: center; justify-content: center; gap: 10px; }
+          .logo-icon { 
+            width: 40px; 
+            height: 40px; 
+            background: linear-gradient(135deg, #667eea, #764ba2); 
+            border-radius: 50%; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            color: white; 
+            font-weight: bold;
+            font-size: 18px;
+          }
           .tagline { color: #666; font-size: 14px; }
           .receipt-title { font-size: 28px; font-weight: bold; color: #333; margin: 20px 0; }
           .receipt-id { background: #ffc107; color: #333; padding: 8px 15px; border-radius: 20px; font-weight: bold; display: inline-block; }
           .details-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 30px 0; }
           .detail-item { padding: 15px; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #ffc107; }
           .detail-label { font-size: 12px; color: #666; text-transform: uppercase; margin-bottom: 5px; }
-          .detail-value { font-size: 16px; font-weight: bold; color: #333; }
+          .detail-value { font-size: 16px; font-weight: bold; color: #333; word-break: break-word; }
           .amount-section { text-align: center; background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 30px; border-radius: 15px; margin: 30px 0; }
           .amount { font-size: 36px; font-weight: bold; margin-bottom: 10px; }
           .thank-you { text-align: center; margin-top: 30px; padding: 20px; background: #e8f5e8; border-radius: 10px; }
+          .thank-you-icon { 
+            width: 50px; 
+            height: 50px; 
+            background: #2e7d32; 
+            border-radius: 50%; 
+            display: inline-flex; 
+            align-items: center; 
+            justify-content: center; 
+            color: white; 
+            font-size: 28px; 
+            font-weight: bold;
+            margin-bottom: 10px;
+          }
           .footer { text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; font-size: 12px; color: #666; }
-          @media print { body { background: white; } .receipt { box-shadow: none; } }
+          @media print { 
+            body { background: white; } 
+            .receipt { box-shadow: none; }
+            @page { margin: 1cm; }
+          }
         </style>
       </head>
       <body>
         <div class="receipt">
           <div class="header">
-            <div class="logo">🎓 SRSV ED&W TRUST</div>
-            <div class="tagline">Hope for a Better Tomorrow</div>
+            <div class="logo">
+              <div class="logo-icon">SRSV</div>
+              <span>SRSV ED&W Trust</span>
+            </div>
+            <div class="tagline">SRSV Education & Welfare Trust</div>
             <h2 class="receipt-title">Donation Receipt</h2>
             <span class="receipt-id">Receipt #UGS${currentDonationId}</span>
           </div>
@@ -218,7 +252,7 @@ const DonationSection = () => {
           </div>
 
           <div class="amount-section">
-            <div class="amount">₹${parseInt(donation.amount).toLocaleString('en-IN')}</div>
+            <div class="amount">&#8377; ${parseInt(donation.amount).toLocaleString('en-IN')}</div>
             <p>Thank you for your generous contribution!</p>
           </div>
 
@@ -230,14 +264,15 @@ const DonationSection = () => {
           ` : ''}
 
           <div class="thank-you">
-            <h3 style="color: #2e7d32; margin-bottom: 10px;">🙏 Thank You!</h3>
-            <p style="margin: 0; color: #333;">Your donation will help us provide world-class education to Economical Poor children and create future leaders.</p>
+            <div class="thank-you-icon">&#10004;</div>
+            <h3 style="color: #2e7d32; margin-bottom: 10px;">Thank You!</h3>
+            <p style="margin: 0; color: #333;">Your donation will help us provide world-class education to economically disadvantaged children and create future leaders.</p>
           </div>
 
           <div class="footer">
-            <p><strong>SRSV ED&W TRUST</strong></p>
+            <p><strong>SRSV ED & W Trust</strong></p>
             <p>Email: srsv2600@gmail.com | Phone: +91 70818 22600</p>
-            <p>Location: Near Tinhari Mafi,Bigra Awwal, Block Semriyawan SantKabir Nagar 272126, Uttar Pradesh, India</p>
+            <p>Location: Near Tinhari Mafi, Bigra Awwal, Block Semriyawan<br>Sant Kabir Nagar 272126, Uttar Pradesh, India</p>
             <p style="margin-top: 15px; font-size: 11px;">This is a computer-generated receipt. Please keep this for your records.</p>
           </div>
         </div>
@@ -245,7 +280,7 @@ const DonationSection = () => {
       </html>
     `;
 
-    const blob = new Blob([receiptHTML], { type: 'text/html' });
+    const blob = new Blob([receiptHTML], { type: 'text/html;charset=utf-8' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
