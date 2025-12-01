@@ -111,7 +111,7 @@ const Header = () => {
                 <li className="nav-item dropdown">
                   <span className="nav-link dropdown-toggle">Mentors ▾</span>
                   <div className="dropdown-menu">
-                    <Link to="/faculty" onClick={closeMenu}>Faculty</Link>
+                    <Link to="/mentor" onClick={closeMenu}>Mentor</Link>
                     <Link to="/staff" onClick={closeMenu}>Staff</Link>
                     <Link to="/students" onClick={closeMenu}>Students</Link>
                   </div>

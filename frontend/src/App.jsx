@@ -18,6 +18,7 @@ import EducationModel from './pages/EducationModel';
 import NewMission from './pages/NewMission';
 import NewSection from './pages/NewSection';
 import Popup from './pages/Popup'; // Import Popup component
+import Mentor from './pages/Mentor';
 // import ScrollToTop from './components/common/ScrollToTop';
 
 function App() {
@@ -55,6 +56,7 @@ function App() {
             <Route path="/model-education" element={<EducationModel />} />
             <Route path="/new-mission" element={<NewMission />} />
             <Route path="/new-section" element={<NewSection />} />
+            <Route path="/mentor" element={<Mentor />} />
           </Routes>
         </main>
         <Footer />
