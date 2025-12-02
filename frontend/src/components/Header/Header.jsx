@@ -109,12 +109,12 @@ const Header = () => {
                   </div>
                 </li>
                 <li className="nav-item dropdown">
-                  <span className="nav-link dropdown-toggle">Mentors ▾</span>
-                  <div className="dropdown-menu">
+                  <span className="nav-link dropdown-toggle"><Link to={'/mentor'}>Mentor</Link></span>
+                  {/* <div className="dropdown-menu">
                     <Link to="/mentor" onClick={closeMenu}>Mentor</Link>
                     <Link to="/staff" onClick={closeMenu}>Staff</Link>
                     <Link to="/students" onClick={closeMenu}>Students</Link>
-                  </div>
+                  </div> */}
                 </li>
                 <li className="nav-item dropdown">
                   <span className="nav-link dropdown-toggle">Mission ▾</span>
