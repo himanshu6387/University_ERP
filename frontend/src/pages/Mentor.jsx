@@ -6,13 +6,13 @@ const Mentor = () => {
   const mentors = [
     {
       id: 1,
-      name: 'Dr. Rajesh Kumar',
+      name: 'Maulana Mohammad Ibraheem',
       designation: 'Chief Mentor',
       specialization: 'Education & Leadership',
       image: '/images/mentor1.jpg', // Replace with actual image path
       experience: '15+ Years',
-      linkedIn: 'https://linkedin.com',
-      email: 'rajesh@mpct.org'
+      // linkedIn: 'https://linkedin.com',
+      // email: 'rajesh@mpct.org'
     }
   ];
 
