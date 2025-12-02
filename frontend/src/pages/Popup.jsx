@@ -98,7 +98,7 @@ const Popup = ({ isOpen, onClose }) => {
                                         style={{ background: "#25D366", }}
                                     >
                                         <p className="social-caption">
-                                            Follow the official WhatsApp channel for updates
+                                            Follow WhatsApp Channel for Updates
                                         </p>
 
                                     </a>

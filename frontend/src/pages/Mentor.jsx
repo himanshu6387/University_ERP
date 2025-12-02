@@ -6,14 +6,75 @@ const Mentor = () => {
   const mentors = [
     {
       id: 1,
+      name: 'Awdhesh Kumar Yadav',
+      designation: 'Assistant Proffesor',
+      specialization: 'B.Sc, M.A., B.Ed.',
+      image: '/images/Awadesh.png', // Replace with actual image path
+      experience: '15+ Years',
+      // linkedIn: 'https://linkedin.com',
+      // email: 'rajesh@mpct.org'
+    },
+    {
+      id: 2,
+      name: 'Anand Kishor',
+      designation: 'Proffesor',
+      specialization: 'M.Sc, B.Ed.',
+      image: '/images/Anand.png', // Replace with actual image path
+      experience: '10+ Years',
+      // linkedIn: 'https://linkedin.com',
+      // email: 'rajesh@mpct.org'
+    },
+
+    {
+      id: 3,
+      name: 'Er. Jitendra Kumar Kannoujiya',
+      designation: 'Revenue Officer',
+      specialization: 'B.Tech',
+      image: '/images/Jitendra.png', // Replace with actual image path
+      experience: '8+ Years',
+      // linkedIn: 'https://linkedin.com',
+      // email: 'rajesh@mpct.org'
+    },
+    {
+      id: 4,
+      name: 'JItendra Kumar Varun',
+      designation: 'Sport Teacher',
+      specialization: 'B.A.,BPED',
+      image: '/images/Varun.png', // Replace with actual image path
+      experience: '12+ Years',
+      // linkedIn: 'https://linkedin.com',
+      // email: 'rajesh@mpct.org'
+    },
+    {
+      id: 5,
       name: 'Maulana Mohammad Ibraheem',
       designation: 'Chief Mentor',
       specialization: 'Education & Leadership',
       image: '/images/mentor1.jpg', // Replace with actual image path
-      experience: '15+ Years',
+      experience: '8+ Years',
       // linkedIn: 'https://linkedin.com',
       // email: 'rajesh@mpct.org'
-    }
+    },
+    {
+      id: 6,
+      name: 'Er. Vikram Bharati',
+      designation: 'Civil Engineer',
+      specialization: 'B.Tech',
+      image: '/images/Vikram.png', // Replace with actual image path
+      experience: '6+ Years',
+      // linkedIn: 'https://linkedin.com',
+      // email: 'rajesh@mpct.org'
+    },
+    {
+      id: 7,
+      name: 'Dr. Jawahar Lal',
+      designation: 'Assistant Proffesor',
+      specialization: 'Department of Geography, Mahamaya Government PG College Mahona, Lucknow.',
+      image: '/images/jawaharlal.jpg', // Replace with actual image path
+      experience: '8+ Years',
+      // linkedIn: 'https://linkedin.com',
+      // email: 'rajesh@mpct.org'
+    },
   ];
 
   return (
@@ -43,23 +104,23 @@ const Mentor = () => {
                 />
                 <div className="mentor-badge">{mentor.experience}</div>
               </div>
-              
+
               <div className="mentor-content">
                 <h3 className="mentor-name">{mentor.name}</h3>
                 <p className="mentor-designation">{mentor.designation}</p>
                 <p className="mentor-specialization">{mentor.specialization}</p>
-                
+
                 <div className="mentor-divider"></div>
-                
+
                 <div className="mentor-social">
                   <a href={mentor.linkedIn} target="_blank" rel="noopener noreferrer" className="social-link">
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                     </svg>
                   </a>
                   <a href={`mailto:${mentor.email}`} className="social-link">
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/>
+                      <path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z" />
                     </svg>
                   </a>
                 </div>
