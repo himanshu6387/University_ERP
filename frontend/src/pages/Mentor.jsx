@@ -7,7 +7,7 @@ const Mentor = () => {
     {
       id: 1,
       name: 'Awdhesh Kumar Yadav',
-      designation: 'Assistant Proffesor',
+      // designation: 'Assistant Proffesor',
       specialization: 'B.Sc, M.A., B.Ed.',
       image: '/images/Awadesh.png', // Replace with actual image path
       experience: '15+ Years',
@@ -17,7 +17,7 @@ const Mentor = () => {
     {
       id: 2,
       name: 'Anand Kishor',
-      designation: 'Proffesor',
+      // designation: 'Proffesor',
       specialization: 'M.Sc, B.Ed.',
       image: '/images/Anand.png', // Replace with actual image path
       experience: '10+ Years',
@@ -48,7 +48,7 @@ const Mentor = () => {
     {
       id: 5,
       name: 'Maulana Mohammad Ibraheem',
-      designation: 'Chief Mentor',
+      // designation: 'Chief Mentor',
       specialization: 'Education & Leadership',
       image: '/images/mentor1.jpg', // Replace with actual image path
       experience: '8+ Years',

@@ -91,7 +91,7 @@ const Popup = ({ isOpen, onClose }) => {
                                 <div className="social-icons">
                                     {/* WhatsApp */}
                                     <a
-                                        href="https://wa.me/7081822600"
+                                        href="https://whatsapp.com/channel/0029VbBfg438fewrv9VcLo3G"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="social-icon"
