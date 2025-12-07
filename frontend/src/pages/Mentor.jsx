@@ -75,6 +75,26 @@ const Mentor = () => {
       // linkedIn: 'https://linkedin.com',
       // email: 'rajesh@mpct.org'
     },
+    {
+      id: 8,
+      name: 'Dr. Arun Kumar (Pt.)',
+      designation: 'DPT,BPT',
+      // specialization: 'Department of Geography, Mahamaya Government PG College Mahona, Lucknow.',
+      image: '/images/Arun.png', // Replace with actual image path
+      experience: '8+ Years',
+      // linkedIn: 'https://linkedin.com',
+      // email: 'rajesh@mpct.org'
+    },
+    {
+      id: 9,
+      name: 'Dr. Abhishek Kumar Singh',
+      designation: 'Lecturer HRSC Khalilabad',
+      specialization: 'Director MPCT',
+      image: '/images/Abhishek.png', // Replace with actual image path
+      experience: '8+ Years',
+      // linkedIn: 'https://linkedin.com',
+      // email: 'rajesh@mpct.org'
+    },
   ];
 
   return (
